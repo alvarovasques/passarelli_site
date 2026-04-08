@@ -26,7 +26,7 @@ services:
       - "traefik.http.routers.passarelli.entrypoints=websecure"
       - "traefik.http.routers.passarelli.tls=true"
       # Cert-resolver - ajustar conforme nome do Let's Encrypt no Portainer/Traefik (ex: leresolver)
-      - "traefik.http.routers.passarelli.tls.certresolver=leresolver" 
+      - "traefik.http.routers.passarelli.tls.certresolver=letsencryptresolver"
       - "traefik.http.services.passarelli.loadbalancer.server.port=80"
       
   db:
