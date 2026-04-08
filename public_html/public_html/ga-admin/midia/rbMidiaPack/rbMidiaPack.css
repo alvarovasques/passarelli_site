@@ -1,0 +1,20 @@
+/**
+ * Conjunto de estilos para o rbMidiaPack, uma interface de upload do ga-admin
+ * @version   1.002, Created:30/07/2010,LastModified: 28/11/2010
+ * @author    Rafael Benites <rbenites@gestaoativa.com.br>
+ */
+#midia_box{padding-top:3px;position:relative}
+	.midia-box{height:138px;overflow:hidden;position: relative;color:#000}
+	.midia-box input{margin:.3em 0}
+	.midia-box .span-2{padding-top:.3em }
+.rbMidia-title{font-weight:bold;color:#059BCF}
+.rbMidia-add{line-height:16px;font-size:10px;margin-bottom:.5em}
+	.rbMidia-add img{vertical-align:middle}
+	.rbMidia-add a{text-decoration:none}
+	.rbMidia-add a:hover{text-decoration:underline}
+.rbMidia-row{margin-bottom:.2em}
+/* estilos */
+.left{text-align:left}
+.light{background:url(light.png) repeat}
+.right{text-align:right}
+

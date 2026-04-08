@@ -1,0 +1,113 @@
+/**
+ * Passarelli Advocacia
+ * Folha de estilos usada no projeto, com as definições
+ * font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+ * font-family: Tahoma, Verdana, Segoe, sans-serif;
+ */
+
+	html,
+	body{width:100%;height:100%;min-height:100%; font-family: Tahoma, Verdana, Segoe, sans-serif; min-width: 1024px; color: #615244; font-size: 14px; background:url(../img/bg.jpg);}
+	html{overflow-y:scroll;}
+
+	h1 {color: #4C3F33; font-size: 25px; font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; text-shadow:0px 1px 0px #EDE5D9; font-weight: bold; text-transform: uppercase;}
+	h2{font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 18px; color: #4C3F34; font-weight: bold;}
+	h3{font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 16px; color: #4C3F34;  font-weight: bold;}
+	h2 a {font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 18px; color: #4C3F34; font-weight: bold;}
+	h3 a {font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 16px; color: #4C3F34; font-weight: bold;}
+
+	a{font-size: 14px; text-decoration: none;color: #605244}
+	a:hover{text-decoration: none;color: #B28500}
+	ul,li,ol{margin:0px; padding: 0px; list-style: none}
+	span{font-size: 12px;}
+
+/* classes */
+	.container{position: relative;}
+	.floatL{float:left;margin-right:8px;}
+	.floatR{float:right;margin-left:8px;}
+	.aCenter{text-align:center;}
+	.aRight{text-align:right;}
+	.aJustify{text-align: justify;}
+	.margin-bottom0{margin-bottom: 0px}
+	.prepend-half{padding-left:20px;}
+	.append-half{padding-right:20px;}
+	.bg-meio{background: url(../img/bg-meio.jpg) no-repeat top center;}
+	.marrom {color: #664C00}
+	.borda{border:1px solid #C7AF83;}
+
+/* Header Home */
+	.bg-menu-home{background: url(../img/menu-home.png) repeat-x 50% 271px;height: 236px;padding-top: 252px;}
+	.menu-sombra{background: url(../img/menu-home-sombra.png) no-repeat;padding-top: 50px;}
+	.home-menu{margin-top:40px }
+	.home-menu li{float: left;}
+	.home-menu li a{float: left; padding:5px 19px; color: #B28500; text-transform: uppercase;font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; border-left: 1px solid #64522B;}
+	.home-menu li a:hover{color:#FFC926; background: url(../img/menu-hvr.png) no-repeat center center;}
+	.home-menu li.first a{border-left: none!important}
+
+/* Header */	
+	.header{padding-top: 110px; margin-bottom: 55px}
+	.breadcrumb {position: absolute;top: 0px; right: 5px}
+	.breadcrumb li{display: inline;}
+	.breadcrumb li a{font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 12px; text-transform: uppercase;}
+
+/* Footer */
+	.footer{height: 61px; font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; }
+	.footer ul{text-transform: uppercase;position: absolute;bottom: 0px}
+	.footer ul {padding-top: 10px; border-top: 1px solid #CEB58A;}
+	.footer ul li{float:left;line-height:1}
+	.footer ul a,.footer ul  p{text-decoration:none;float:left;padding:10px 8px; font-size: 12px}
+	.footer ul a.contato{margin-right: 0px!important;padding-right: 0px!important}
+	.footer ul a:hover,	.footer ul a.ativo{color: #B28500}
+
+/* Escritorio */
+	.escritorio{width: 580px; padding-right: 20px!important}
+	.ic_wrapper{padding: 0px!important;float:left}
+	.ic_myCarousel .ic_button {float: left;  height: 75px;  line-height: 25px;  margin: 0 10px 10px 0px;  width: 100px;}
+	.infiniteCarousel, .infiniteCarousel_item{height: 240px!important}
+	.ic_thumbnails{width: 330px!important; margin-top: 5px}
+    .ic_thumbnail_tray{float:left;}
+	
+	.ic_right_nav {position: absolute;z-index: 10;width:auto!important; bottom:-15px;top: auto!important; right: 167px!important;}
+    .ic_right_nav img{width: 15px!important; height: 16px!important; background: url(../img/sprites.png) no-repeat 0px -38px;}
+	.ic_left_nav {position: absolute;z-index: 10;width:auto!important; bottom:-15px;top: auto!important;left: 172px!important;}
+    .ic_left_nav img{width: 15px!important; height: 18px!important; background: url(../img/sprites.png) no-repeat 0px -51px;}
+	.ic_right_nav img:hover{ background: url(../img/sprites.png) no-repeat 0px -20px;}
+	.ic_left_nav img:hover{background: url(../img/sprites.png) no-repeat 0px 0px;}
+
+/* advogados */
+	.associados{width: 300px; float: right;}
+	.sub-titulo{padding:5px 0px 5px 10px; background: url(../img/fil-marrom.png);}
+	.associados p{margin-bottom: 3px; border-bottom: 1px solid #CEBCA1}
+
+/* artigos */
+	.autor{display: block;font-size: 12px;color: #897661}
+	.autor li{float: left; margin-right: 5px}
+	.autor li .addthis_toolbox {width: 200px}
+
+/* Carreira */
+	.frm-carreira label{display: block;}
+	.frm-carreira input[type="text"],.frm-carreira textarea{height: 25px;padding: 5px; border-color: #C7AF83; background:#F2E8D7; margin:0px 0px 10px 0}
+	.frm-carreira textarea{height: 70px; margin-bottom: 15px}
+	.frm-carreira p.anexar{background: url(../img/anexar-arquivos.png) no-repeat;}
+	.frm-carreira input[type="file"]{opacity: 0}
+	.frm-carreira input[type="submit"]{background: url(../img/enviar.png) no-repeat;font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 14px; color: #fff; border:none;padding: 9px 20px; cursor: pointer;}
+
+/* Contato */
+	li.endereco, li.telefone, li.mail{padding-left: 20px}
+	li.endereco{background: url(../img/pointer.png) no-repeat 0px 5px; }
+	li.mail{background: url(../img/mail.png) no-repeat 0px 8px; }
+	li.telefone{background: url(../img/fone.png) no-repeat 0px 6px; }
+	.assunto{margin-bottom: 10px}
+/* Erro 404 */
+	.erro{margin:100px 0 200px;}
+	.erro p a{color: #b20000}
+
+/* Paginação */
+	.pagi li{display: inline; margin:0px 3px;}
+	.pagi li a{padding: 3px 8px 3px 9px;font-family: tahoma;}
+	.pagi li a.ativo, .pagi li a:hover{background: #7C6B61; color: #fff}
+	.pagi li a.maior{padding:3px 6px 3px 8px;}
+	.pagi li a.menor{padding:3px 3px 3px 7px;}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+	.home-menu li a{padding: 5px 19px;}   
+}

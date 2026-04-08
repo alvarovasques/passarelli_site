@@ -1,0 +1,60 @@
+#<!--[
+# SEO Plugin 0.1
+#
+# Arquivo de htaccess que fará redirecionamentos para uso de url amigável
+#
+# @author   Rafael Benites <rbenites@gestaoativa.com.br>
+# @version  0.001, Created: 23/02/2011, LastModified: 13/07/2011
+# @package  Plugins
+## ]-->
+# ----------------------------------------------------------------------
+# Iniciar o "Engine"
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 	Opção "single"
+#	URL:
+#		- BASE / MODULO / TITULO-AMIGAVEL / ID /
+#	->
+#		- BASE / MODULO / index.php ?detail = ID
+# ----------------------------------------------------------------------
+
+#<IfModule mod_rewrite.c>
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteRule ^([\w|\-|\_]+)\/?(\d+)?\/?$ index.php?seo=$1&detail=$2 [QSA,L,NS]
+#</IfModule>
+
+# ----------------------------------------------------------------------
+# 	Opção "double"
+#	URL:
+#		- BASE / MODULO / TITULO-AMIGAVEL / ID / TITULO-AMIGAVEL2 / ID2 /
+#	->
+#		- BASE / MODULO / index.php ?detail = ID2 & item = ID
+# ----------------------------------------------------------------------
+
+#<IfModule mod_rewrite.c>
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteRule ^([\w|\-|_]*)\/?(\d*)\/?([\w|\-|_]*)\/?(\d*)\/?$ index.php?seo=$1&item=$2&seo2=$3&detail=$4 [QSA,L,NS]
+#</IfModule>
+
+# ----------------------------------------------------------------------
+# 	Opção "url"
+#	URL:
+#		- BASE / MODULO / ?
+#	->
+#	retorna o $_GET mapeado de acordo com a função de mapeamento, ou
+#		-BASE / MODULO / parte-1 / parte-2 / parte-3 /
+#   ->
+#		BASE / MODULO /?args0=parte-1&args1=parte-2&args2=parte-3
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php?seo_vars=$1 [QSA,L,NS]
+</IfModule>

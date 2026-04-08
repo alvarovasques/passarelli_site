@@ -1,0 +1,131 @@
+/*
+Novo estilo GA
+*/
+/* importar fonte */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+html {overflow-y:scroll;height:100%;}
+body{font-family: 'Open Sans Condensed', sans-serif;font-size:15px;color:#8d8d8d;background:url(../images/admin_style3.0/bg.png) repeat;height:100%;}
+a{color:#8d8d8d;text-decoration:none;}
+a:hover{color:#333; text-decoration:underline;}
+h1, h2, h3, h4, h5, h6 {color: #222;font-weight: bold;}
+h1{font-size:31px;}
+h2{font-size:26px;padding:0 0 10px 0;}
+h3{font-size:17px;padding:0 0 10px 0;}
+h4{font-size:16px;padding:0 0 5px 0;}
+h5{font-size:14px;padding:0 0 5px 0;}
+h6{font-size:12px;padding:0 0 5px 0;}
+#ga-login-box{width:423px;height:276px;position:absolute;left:50%;top:50%;margin:-138px 0 0 -212px;}
+#ga-login-box h2{font-size:24px;font-weight:bold;margin:0 0 .3em 0;color:#787878}
+#ga-form-box{background:url(../images/admin_style3.0/login_box.png) no-repeat 0 0;padding:20px 30px;height:160px;}
+	#ga-form-box p{margin-bottom:1em !important;}
+	.form-row{position:relative;}
+	#ga-form-box label{display:block;text-align:right;width:58px;line-height:31px;}
+	#ga-form-box label.error{display:block;padding:0 1em;border:0 none;width:auto;margin:.3em 0;font-size:.8em;position:absolute;top:0;right:0;background:none;}
+	#login-footer{font-size:.95em;padding:0 5px;}
+	.ga-input-login{background:url(../images/admin_style3.0/input.png) no-repeat 0 0;padding:2px 5px;width:284px;height:27px;border:0 none !important;margin:0.2em 0 !important}
+	#ga-form-box .btnSave {background:url(../images/admin_style3.0/submit.png) no-repeat 0 0;width:102px;height:27px;border:0 none;color:#999}
+	#msg_box div{padding:0 .3em}
+/* basic */
+.aRight{text-align:right;}
+.prepend-top-quarter {margin-top:0.375em !important;}
+.append-half {padding-right:20px;}
+.prepend-half {padding-left:20px;}
+.container, .footer{background:url(../images/admin_style3.0/menu-bg.png) repeat-y;}
+.footer{padding-left:10px;font-size:.85em;height:20px;clear:both;margin:0;position:relative;text-align:left;}
+/* from simpla */
+.content-box {border: 1px solid #ccc;margin: 0 0 20px 0;background: #fff;}
+.content-box-header {background:#e5e5e5 url('../images/admin_style3.0/bg-content-box.gif') top left repeat-x;margin-top: 1px;height:40px;}
+.content-box-header h3 {padding: 12px 15px 10px;float: left;margin-bottom:0;}
+.button {font-family: Verdana, Arial, sans-serif;display: inline-block;background: #459300 url('../images/admin_style3.0/bg-button-green.gif') top left repeat-x !important;/*border: 1px solid #459300 !important*/;padding: 4px 7px 4px 7px !important;color: #fff !important;font-size: 11px !important;cursor: pointer;}
+.buttonc{background-image:url(../images/admin_style3.0/bg-content-box.gif) !important;color:#333 !important;border:1px solid #CCC !important;}
+.button:active {padding: 5px 7px 3px 7px !important;}
+/* menu */
+.first-level {width: 206px;padding: 0;margin: 0 0 0 15px;}
+.first-level li {list-style: none;padding-bottom: 10px;text-align: right;}
+.first-level li a.nav-top-item {background:transparent url('../images/admin_style3.0/bg-menu-item-current.png') right center no-repeat;padding: 10px 15px 11px;color: #333;font-size: 14px;cursor: pointer;display: block;text-decoration: none;}
+.first-level li a.current {background: url('../images/admin_style3.0/menu-item.png')  right center no-repeat !important;color: #FFF;}
+.first-level ul li a.current {background: none !important;font-weight: bold;}
+.first-level li a.current:hover {color: #DE731B;}
+.first-level ul {padding:0;font-size:12px;margin:0;}
+.first-level ul li {list-style: none;margin:0;text-align: right;padding:0;}
+.first-level ul li a {padding:8px 15px;display:block;color: #333;font-size: 13px;line-height:1.55em;}
+.first-level li a.nav-top-item:hover {color:#FFF !important}
+.first-level a:hover,
+.first-level ul li a.current,
+.first-level ul li a.current:hover  {color:#DE731B !important;}
+/* table */
+.list_table {width:100%;border-collapse:collapse;}
+.list_table thead th {font-weight: bold;font-size: 15px;border-bottom: 1px solid #ddd;}
+.list_table tbody {border-bottom: 1px solid #ddd;}
+.list_table td,
+.list_table th {padding: 10px;line-height: 1.3em;background:transparent;}
+.list_table .item-0 td{background:#f3f3f3}
+.list_table .item-1 td{background:#FFF}
+.list_table tfoot td .bulk-actions {padding: 15px 0 5px 0;}
+.list_table tfoot td .bulk-actions select {padding: 4px;border: 1px solid #ccc;}
+.list_table tbody td a{display:block;}
+.list_table tbody td.last a{display:inline;}
+/* paginação */
+.paginate {text-align: right;padding: 20px 0 5px 0;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;}
+.paginate a, .paginate span,
+.num-paginacao a, .num-paginacao span{border: 1px solid #ddd;margin: 0 5px 0 0;padding: 3px 6px;}
+.num-paginacao span, .num-paginacao a{float:right}
+.paginate .current {background: #FFF url('../images/admin_style3.0/bg-content-box.gif') bottom left repeat-x !important;border-color: #CCC !important;color: #fff !important;}
+.paginate .current:hover {text-decoration: underline;}
+/* forms */
+form label {display: block;font-weight: bold;}
+form fieldset legend {font-weight: bold;margin-bottom: 10px;padding-top: 10px;}
+form p small {font-size: 0.75em;color: #777;}
+form input.text-input,
+form select,
+form textarea,
+form .small-input {width: 25%;}
+form .medium-input {width: 50% !important;}
+form .large-input {width: 97.5% !important;font-size: 16px !important;padding: 8px !important;}
+form textarea {width: 97.5% !important;font-family: Arial, Helvetica, sans-serif;}                
+form select {padding: 4px;background: #fff;}
+form input[type="checkbox"],
+form input[type="radio"] {padding: 0;background: none;border: 0;}
+/* validate errors */
+form label.error {background:transparent url(../images/admin_style3.0/cross_circle.png) no-repeat 0 4px; border:0 none;padding:0 0 0 20px;font-weight:normal;}
+/* opções */
+.shortcut-button {border: 1px solid #ccc;background: #f7f7f7 url('../images/admin_style3.0/shortcut-button-bg.gif') top left no-repeat;display: block;width: 120px;margin: 0 0 20px 0;}
+.shortcut-button span {border: 1px solid #fff;display:block;padding: 15px 10px 15px 10px;text-align: center;color: #555;font-size: 13px;line-height: 1.3em;}
+.shortcut-button span img {margin-bottom: 10px;}
+.shortcut-button:hover {background: #fff;}
+.shortcut-button span:hover {color: #57a000;}
+.shortcut-button:hover {text-decoration:none;}
+ul.shortcut-buttons-set li {float: left;margin: 0 15px 0 0;padding: 0 !important;background: 0;list-style:none;*margin-top:20px;}
+.shortcut-buttons-set:first-child{clear:both;}
+/* midias */
+#midia_show_wrapper {position:relative;clear:both;margin:0 auto; min-width:600px;width:auto}
+.midia-item {background: #f7f7f7 url('../images/admin_style3.0/shortcut-button-bg.gif') top left no-repeat;margin:4px;border:1px solid #CCC;text-align:center;}
+	.midia-item img{margin:3px;vertical-align:middle;cursor:pointer;}
+/* css3 */
+.button,
+.buttonc,
+.list_table tfoot td .bulk-actions select,
+.paginate a.number,
+form input.text-input,
+form textarea,
+form select {-moz-border-radius: 4px;-webkit-border-radius: 4px;border-radius: 4px;}
+.content-box,
+.content-box-header,
+ul.content-box-tabs li a.current,
+.shortcut-button,
+.notification {-moz-border-radius: 6px;-webkit-border-radius: 6px;border-radius: 6px;}
+.content-box-header {-moz-border-radius-bottomleft: 0;-moz-border-radius-bottomright: 0;-webkit-border-bottom-left-radius: 0;-webkit-border-bottom-right-radius: 0;border-bottom-left-radius: 0;border-bottom-right-radius: 0;}				
+.closed-box .content-box-header {-moz-border-radius-bottomleft: 6px;-moz-border-radius-bottomright: 6px;-webkit-border-bottom-left-radius: 6px;-webkit-border-bottom-right-radius: 6px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;}
+ul.content-box-tabs li a.current {-moz-border-radius-bottomleft: 0;-moz-border-radius-bottomright: 0;-webkit-border-bottom-left-radius: 0;-webkit-border-bottom-right-radius: 0;border-bottom-left-radius: 0;border-bottom-right-radius: 0;}
+.shortcut-button span, .midia-item {-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+/* fixed layout * /
+#externalBox{margin-bottom:-20px;height:100%;height:auto !important; min-height:100%;position:relative;}
+#ga-left-box{position:absolute; top:0;left:0;width:230px;min-height:100%;}
+#ga-right-box {margin:0 0 0 240px;width:710px;}
+.footer{width:940px;margin:0 auto}
+/**/
+/* fluid layout */
+#externalBox{margin-bottom:-20px;height:100%;height:auto !important; min-height:100%;width:auto !important;position:relative;}
+#ga-left-box{position:absolute; top:0;left:0;width:230px;height:100%;} 
+#ga-right-box {margin:0 10px 0 240px;min-width:710px;width:auto !important;} 
+/**/

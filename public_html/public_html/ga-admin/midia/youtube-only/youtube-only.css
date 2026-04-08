@@ -1,0 +1,11 @@
+/**
+ * Estilo Youtube-only
+ * @author  Rafael Benites
+ */
+#youtube-only-wrapper{position:relative;height:200px;display:block !important}
+	#youtube-only-wrapper textarea{width:575px; height:70px}
+	#youtube-only-help-box{width:530px;height:120px;top:50%;left:50%;margin:-75px 0 0 -285px;position:absolute;}
+	#youtube-only-help-box ul{list-style-position:inside;margin:0}
+	#youtube-only-wrapper ul li.close {list-style:none;text-align:center}
+	#youtube-only-wrapper .info{background:#FFF;color:#444;border:2px solid #CCC;}
+#youtube-only-overlay{width:100%;height:100%;background:#333;position:absolute;top:0;left:0;padding-bottom:20px;}

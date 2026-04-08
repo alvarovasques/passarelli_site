@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: passarelli_app
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=passarel_passare
+      - DB_USER=passarel_passare
+      - DB_PASS=T8u0Iuo5z5mi
+    networks:
+      - di4e
+      - internal
+    labels:
+      - "traefik.enable=true"
+      # O $DOMAIN pode ser definido num arquivo .env quando no VPS, ou usará o padrão passarelli.adv.br
+      - "traefik.http.routers.passarelli.rule=Host(`${DOMAIN:-passarelli.adv.br}`)"
+      - "traefik.http.routers.passarelli.entrypoints=websecure"
+      - "traefik.http.routers.passarelli.tls=true"
+      # Cert-resolver - ajustar conforme nome do Let's Encrypt no Portainer/Traefik (ex: leresolver)
+      - "traefik.http.routers.passarelli.tls.certresolver=leresolver" 
+      - "traefik.http.services.passarelli.loadbalancer.server.port=80"
+      
+  db:
+    image: mariadb:10.5
+    container_name: passarelli_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=senha_root_segura
+      - MYSQL_DATABASE=passarel_passare
+      - MYSQL_USER=passarel_passare
+      - MYSQL_PASSWORD=T8u0Iuo5z5mi
+    volumes:
+      - db_data:/var/lib/mysql
+      # Auto-import do banco. O MariaDB irá importar esse sql no primeiro startup.
+      - ./passarel_passare.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - internal
+
+volumes:
+  db_data:
+
+networks:
+  di4e:
+    external: true
+  internal:
