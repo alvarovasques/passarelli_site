@@ -148,11 +148,12 @@ AddType application/octet-stream       safariextz
 </IfModule>
 # html, txt, css, js, json, xml, htc:
 <IfModule filter_module>
-  FilterDeclare   COMPRESS
-  FilterProvider  COMPRESS  DEFLATE resp=Content-Type /text/(html|css|javascript|plain|x(ml|-component))/
-  FilterProvider  COMPRESS  DEFLATE resp=Content-Type /application/(javascript|json|xml|x-javascript)/
-  FilterChain     COMPRESS
-  FilterProtocol  COMPRESS  change=yes;byteranges=no
+  # Syntax changed in Apache 2.4 causing 500 Error
+  # FilterDeclare   COMPRESS
+  # FilterProvider  COMPRESS  DEFLATE resp=Content-Type /text/(html|css|javascript|plain|x(ml|-component))/
+  # FilterProvider  COMPRESS  DEFLATE resp=Content-Type /application/(javascript|json|xml|x-javascript)/
+  # FilterChain     COMPRESS
+  # FilterProtocol  COMPRESS  change=yes;byteranges=no
 </IfModule>
 
 <IfModule !mod_filter.c>
@@ -430,7 +431,7 @@ FileETag None
 # without -MultiViews, Apache will give a 404 for a rewrite if a folder of the same name does not exist 
 #   e.g. /blog/hello : webmasterworld.com/apache/3808792.htm
 
-Options -MultiViews 
+# Options -MultiViews 
 
 
 
