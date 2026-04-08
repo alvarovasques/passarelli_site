@@ -1811,7 +1811,7 @@
 			$i = 0;
 			while(  $i < strlen($formato) )
 			{
-				switch( $formato{$i} )
+				switch( $formato[$i] )
 				{
 					case 'h': $r .= $hora[0];  break;
 					case 'H': $r .= _0($hora[0]);  break;
@@ -1819,8 +1819,8 @@
 					case 'I': $r .= _0($hora[1]); break;
 					case 's': $r .= $hora[2]; break;
 					case 'S': $r .= _0($hora[2]); break;
-					case '%': $r .= $formato{++$i}; break;
-					default:  $r .= $formato{$i}; break;
+					case '%': $r .= $formato[++$i]; break;
+					default:  $r .= $formato[$i]; break;
 				}
 				$i++;
 			}
@@ -1982,7 +1982,7 @@
 				$base_dir = '.';
 			}
 			$base_dir = (string)$base_dir;
-			if( $base_dir{strlen($base_dir)-1 } !== '/' )
+			if( $base_dir[strlen($base_dir)-1 ] !== '/' )
 			{
 				$base_dir .= '/';
 			}
@@ -2087,7 +2087,7 @@
 			array_push( $dirs, $the_dir );
 			while( $base_dir = array_pop($dirs) )
 			{
-				if($base_dir{strlen($base_dir)-1 } !== '/' )
+				if($base_dir[strlen($base_dir)-1 ] !== '/' )
 					$base_dir .= '/'; 
 				if ($dh = @opendir($base_dir))
 				{

@@ -265,7 +265,7 @@
 						if( $Ratio['width'] > $Ratio['height'] )
 						{ // crop será vertical
 							$resHeight = ceil( $Ratio['width'] * $height );
-							switch( $crop{1} )
+							switch( $crop[1] )
 							{
 								case 'B': $y_pos = $resHeight - $outHeight; break;
 								case 'T': $y_pos = 0; break;
@@ -275,7 +275,7 @@
 						else if( $Ratio['height'] > $Ratio['width'] )
 						{ // crop será horizontal
 							$resWidth = floor($Ratio['height'] * $width);
-							switch( $crop{0} )
+							switch( $crop[0] )
 							{
 								case 'L': $x_pos = 0; break;
 								case 'R': $x_pos = $resWidth - $outWidth; break;

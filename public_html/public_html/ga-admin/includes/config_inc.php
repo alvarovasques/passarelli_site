@@ -72,8 +72,8 @@
         define( "BASE_URL", "https://".$_SERVER['SERVER_NAME']."" );
     }
 //##### DADOS DE SESSÃO ######
-	session_start();
 	session_name($the_client_session);
+	session_start();
 
 /* End of File: includes/config_inc.php */
 /* Path: /ga-admin/includes/config_inc.php */
