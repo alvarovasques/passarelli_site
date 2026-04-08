@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   app:
+    image: passarelli_site-app:latest
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: passarelli_app
-    restart: unless-stopped
-    depends_on:
-      - db
+    deploy:
+      restart_policy:
+        condition: on-failure
     environment:
       - DB_HOST=db
       - DB_NAME=passarel_passare
@@ -29,8 +29,9 @@ services:
       
   db:
     image: mariadb:10.5
-    container_name: passarelli_db
-    restart: unless-stopped
+    deploy:
+      restart_policy:
+        condition: on-failure
     environment:
       - MYSQL_ROOT_PASSWORD=senha_root_segura
       - MYSQL_DATABASE=passarel_passare
