@@ -14,6 +14,8 @@ services:
       - DB_NAME=passarel_passare
       - DB_USER=passarel_passare
       - DB_PASS=T8u0Iuo5z5mi
+    volumes:
+      - ./public_html/public_html:/var/www/html
     networks:
       - di4e
       - internal
