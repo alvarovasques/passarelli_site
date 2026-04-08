@@ -69,8 +69,7 @@
  * Constante com o caminho absoluto(url) até a base do sistema
  */
 	if (!defined("BASE_URL")) {
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443 || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? "https://" : "http://";
-        define( "BASE_URL", $protocol.$_SERVER['SERVER_NAME']."" );
+        define( "BASE_URL", "https://".$_SERVER['SERVER_NAME']."" );
     }
 //##### DADOS DE SESSÃO ######
 	session_start();
